@@ -38,11 +38,12 @@ h1 {
 
 h2 {
     padding: 7px 0 15px 0;
-    font-size: 120%;
+    font-size: 130%;
 }
 
 h3 {
-    font-size: 100%;
+    font-size: 120%;
+    margin-bottom: 10px;
 }
 
 .titre {
@@ -86,6 +87,7 @@ header #logo{
         text-align: center;
         margin: 0;
         border-bottom:4px solid lightgrey;
+        padding: 15px;
     }
     .sousNav a:hover {
         border-bottom: 4px solid ;
@@ -97,7 +99,7 @@ header #logo{
 
 header nav a{
     list-style-type: none;
-    padding: 15px;
+    padding: 45px;
     border-top: 4px solid transparent;
     text-decoration: none;
     margin: 0 10px 0 10px;
@@ -370,7 +372,11 @@ main {
     height: 160px ;
     width: 100%;
     object-fit:cover;
-    object-position: top;
+   /* object-fit:cover;
+    object-position: top;*/
+}
+a .card-text {
+    padding-left: 15px;
 }
 /* effet sur card */
 .appart-card:hover{
@@ -397,7 +403,6 @@ main {
 
 .appart-card-image {
     display: flex;
-
 }
 .list-apparts {
     display: flex;
@@ -409,17 +414,33 @@ main {
 .pop-card-text {
     display: flex;
     flex-basis: 100%;
-    flex-direction: column;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    padding-left: 15px;
+
 }
 
 .image-groupe-card {
     display: flex;
-    flex-basis: 60%;
+    width: 90%;
+
+}
+.image-groupe-card img {
+    object-fit:cover;
+
+
+}
+.groupe-card {
+    display: flex;
+    min-width:240px;
 }
 
-.groupe-card {
+a .card-text .pop-card-text .pop-text{
+ padding-left: 15px;
+}
 
-    min-width:240px;
+.groupe-card .stars {
+   margin-top: auto;
 }
 /*.card-image
 
@@ -620,6 +641,8 @@ main {
 /****** Etoiles ******/
 .stars {
     padding:0;
+    margin: 10px 0;
+
 }
 .stars i{
     /*appart-ville-list*/
@@ -632,7 +655,7 @@ main {
     /*margin: 0;*/
 }
 .stars .fa-grey {
-    color: var(--grey);
+    color: rgba(128, 128, 128, 0.85);
     /*margin: 0;*/
 }
 
