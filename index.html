@@ -7,7 +7,7 @@
     <!-- on intègre la police -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <!-- logo de l'onglet -->
@@ -18,6 +18,7 @@
     <meta name="hébergements" content="hébergements et activités">
 
     <!-- pour normaliser l'apparence des éléments HTML à travers les différents navigateurs -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
 
     <!--Inclusion Styles perso-->
@@ -32,7 +33,7 @@
     <nav>
         <img id="logo" src="assets/logo/Booki@3x.png" alt="logo de la société Booki">
        <div class="sousNav">
-           <a href="#blocs">Hébergements</a>
+           <a href="#ville">Hébergements</a>
            <a href="#activites">Activités</a>
        </div>
     </nav>
@@ -101,7 +102,7 @@
 
     <!-- Partie Choix d'hébergements -->
 
-        <section class="ville">
+        <section id="ville">
             <div class="appart-ville">
                 <h2>Hébergement à Marseille</h2>
                 <div class="appart-ville-list">
@@ -306,57 +307,45 @@
 
     <!-- Activités Marseilles -->
 
-    <section id="activites">
+    <section id="activite">
         <h2>Activités à Marseille</h2>
-        <div id="containerActivites">
-            <!-- Container une image -->
-
-            <div class="activCard bigImage styleContainer">
+        <div class="activite-list">
+            <div class="column">
+                <article>
                 <img src="assets/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vue du Vieux Port">
                 <h3>Vieux Port</h3>
+                </article>
             </div>
-
 
             <!-- Container1 deux images -->
-            <div class="activCard mediumImageContainer mediumImageArrange1">
-
-                <div class="styleContainer mediumImage1">
+            <div class="column double">
+                <article>
                     <img src="assets/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du Fort de Pomègues">
                     <h3>Fort de Pomègues</h3>
-                </div>
-
-
-
-                <div class="styleContainer mediumImage1">
-                    <img class="I2" src="assets/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Vue des Îles du Frioul">
+                </article>
+                <article>
+                    <img  src="assets/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Vue des Îles du Frioul">
                     <h3>Îles du Frioul</h3>
-                </div>
-
+                </article>
             </div>
-
             <!-- Container une image -->
-
-            <div class="activCard bigImage styleContainer">
+            <div class="column">
+                <article>
                 <img src="assets/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Vue du Parc National des Calanques">
                 <h3 class="titre">Parc National des Calanques</h3>
+                </article>
             </div>
 
-
             <!-- Container2 deux images -->
-            <div class="activCard mediumImageContainer mediumImageArrange1">
-
-                <div class="styleContainer mediumImage2">
-                    <img class="I1" src="assets/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Vue de Notre-Dame-de-la-Garde">
+            <div class="column double">
+                <article>
+                    <img src="assets/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Vue de Notre-Dame-de-la-Garde">
                     <h3 class="titre">Notre-Dame-de-la-Garde</h3>
-                </div>
-
-
-
-                <div class="styleContainer mediumImage2">
-                    <img class="I2" src="assets/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Vue de la fontaine du Parc Longchamp">
+                </article>
+                <article>
+                    <img src="assets/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Vue de la fontaine du Parc Longchamp">
                     <h3 class="titre">Parc Longchamp</h3>
-                </div>
-
+                </article>
             </div>
         </div>
     </section>
