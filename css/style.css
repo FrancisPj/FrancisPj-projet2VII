@@ -510,18 +510,18 @@ a .card-text .pop-card-text .pop-text{
     width: 100%;
     height: calc(100% - 67px);
     object-fit: cover;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 25px 25px 0 0;
 }
 
 .activite-list .column article {
     height: 100%;
-    box-shadow: 0px 0px 10px 0px #E0E0E0;
+    box-shadow: 0 0 10px 0 #E0E0E0;
     border-radius: 25px;
 }
 
 .activite-list .column article h3 {
     padding: 21px;
-    margin: 0px;
+    margin: 0;
 }
 
 .activite-list .column.double article {
