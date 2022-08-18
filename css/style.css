@@ -194,7 +194,14 @@ main {
         color: white;
     }
 }
-
+@media all and (max-width: 768px) {
+    main .search-box .search-title h1 {
+        font-size:26px ;
+    }
+    .search {
+        justify-content: flex-start;
+    }
+}
 /************************************/
 /*              Filtres             */
 /************************************/
@@ -220,6 +227,9 @@ main {
     align-items: center;
     width: 90%;
     font-size: 15px;
+
+    margin: 0;
+    gap: 10px;
 }
 
 .filters-button {
@@ -227,7 +237,6 @@ main {
     align-items: center;
     border: 2px solid var(--grey);
     border-radius: 30px;
-    margin: 10px;
     cursor: pointer;
 }
 
@@ -277,6 +286,14 @@ main {
     }
 }
 
+@media all and (max-width: 768px) {
+    .filterTitle h2{
+       /* padding-bottom: 10px;*/
+        margin: auto;
+    }
+}
+
+
 /************************************/
 /*               Infos              */
 /************************************/
@@ -284,7 +301,7 @@ main {
 .info{
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .info .fas{
@@ -413,6 +430,9 @@ main {
         display: flex;
         justify-content:space-evenly;
     }
+    .appart-card-image {
+        height: 150px;
+    }
 }
 
 @media all and (max-width: 768px) {
@@ -420,6 +440,17 @@ main {
         padding-left: 10px;
         padding-right: 10px;
     }
+    .pop-card-text {
+        font-size: 14px;
+    }
+    .pop-card-text .stars{
+        padding-top: 20px;
+        margin-top: 0;
+    }
+    .pop-text p {
+        margin-top: 5px;
+    }
+
 }
 
 .textBas{
@@ -460,11 +491,43 @@ a .card-text {
 }
 
 @media all and (max-width: 992px) {
+    #appart-ville {
+        padding-bottom: 20px;
+    }
     .appart-ville-list .appart-card,.populaire-appart .list-apparts .groupe-card {
         transform: none;
     }
+    .appart-ville-list {
+        gap: 30px;
+    }
+    .appart-ville-list .appart-card .card-text {
+        font-size: 15px;
+    }
+    .appart-ville-list .appart-card .stars {
+        margin-top: 5px;
+    }
+    .appart-ville-list .appart-card {
+        height: 200px;
+        margin: auto;
+    }
+    .appart-ville-list .appart-card img {
+        height: 115px;
+    }
 }
+@media all and (max-width: 768px) {
+    .appart-ville-list .appart-card .card-text h3 {
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+    .appart-ville-list .appart-card .stars i {
+        font-size: small;
+    }
+    #appart-ville .textBas {
+        padding: 0;
+        margin-left: 0;
+    }
 
+}
 /** populaire card **/
 .populaire-appart h2 {
     display: flex;
@@ -530,10 +593,9 @@ a .card-text {
 
 @media all and (max-width: 768px) {
     .list-apparts {
-        padding-left: 10px;
-        padding-right: 10px;
+        width: 100%;
+        padding: 0;
     }
-
 }
 
 /* ombrage sur la carte */
@@ -626,11 +688,19 @@ a .card-text {
 }
 
 @media all and (max-width: 992px) {
+    #activite {
+        margin-top: 10px;
+    }
     #activite .activite-list {
         flex-wrap: wrap;
         height: auto;
     }
-
+    #activite .activite-list, .column, .column .double {
+        gap: 30px;
+    }
+    .activite-list .column article {
+        padding-bottom: 10px;
+    }
     #activite .activite-list .column {
         width: 48%;
     }
@@ -645,11 +715,18 @@ a .card-text {
     }
     .activite-list .column .mobil,
     .activite-list .column.double .mobil {
-        height: 250px;
-        margin-bottom: 20px;
+        height: 200px;
+        margin-bottom: 0;
     }
     .activite-list {
         padding: 0 10px;
+    }
+    .activite-list .column article img {
+        height: 80%;
+    }
+    .activite-list .column article h3 {
+        margin-top: 5px;
+        padding: 0 0 0 10px;
     }
 }
 
