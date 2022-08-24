@@ -1,8 +1,10 @@
-/*             Général              */
-
+/*Général*/
 * {
     box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
 }
+
 :root {
     --blue: #0065FC;
     --light-blue: #DEEBFF;
@@ -34,6 +36,7 @@ h1 {
 }
 
 h2 {
+    padding-left: 10px;
     font-size: 130%;
 }
 
@@ -47,8 +50,7 @@ h3 {
     font-weight: bolder;
 }
 
-
-/*            header + nav          */
+/*header + nav*/
 
 nav {
     display: flex;
@@ -74,7 +76,6 @@ header #logo{
 }
 
 header nav a{
-    list-style-type: none;
     padding: 45px;
     border-top: 4px solid transparent;
     text-decoration: none;
@@ -87,7 +88,7 @@ header nav a:active{
     color: var(--blue);
 }
 
-/*         title + search-box       */
+/*title + search-box*/
 
 main {
     width: auto;
@@ -140,9 +141,7 @@ main {
     color: white;
 }
 
-
-
-/*              Filtres             */
+/*Filtres*/
 
 #filters {
     display: inline-flex;
@@ -164,7 +163,6 @@ main {
     align-items: center;
     width: 90%;
     font-size: 20px;
-
     margin: 0;
     gap: 10px;
 }
@@ -177,11 +175,6 @@ main {
     cursor: pointer;
     margin: 0 15px;
 }
-
-/* Gadjet change la couleur du texte  */
-/*.filters-button a:hover {
-    color: #8d0b0b;
-}*/
 
 .filters-button:hover {
     transition: background-color;
@@ -214,10 +207,7 @@ img {
     display: flex;
 }
 
-
-
-
-/*               Infos              */
+/*Infos*/
 
 .info{
     display: flex;
@@ -233,6 +223,8 @@ img {
     justify-content: center;
     height: 35px;
     width: 35px;
+    margin-right: 5px;
+    min-width: 37px;
     border-radius: 50%;
     }
 
@@ -240,15 +232,13 @@ img {
     margin-left: 15px;
 }
 
-
-
-/*           Hébergements           */
+/*Hébergements*/
 
 .ville {
     display: flex;
     gap: 30px;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 .ville > div {
@@ -271,14 +261,7 @@ img {
     margin: auto;
 }
 
-.appart-card .card-text .stars {
-   /* position: relative;
-    top: 20px;*/
-}
-
-
-
-/** Liste des appartements **/
+/**Liste des appartements**/
 
 .appart-ville-list {
     display: flex;
@@ -288,7 +271,7 @@ img {
     margin-bottom: 10px;
 }
 
-/** Liste populaire **/
+/**Liste populaire**/
 
 .ville #populaire-appart .list-apparts {
     display: flex;
@@ -302,6 +285,14 @@ img {
     font-weight: bold;
     margin-left: 10px;
 }
+/*sur le texteBas*/
+#appart-ville  .textBas:hover {
+    color: red;
+}
+#appart-ville  .textBas:focus {
+    color: var(--blue);
+}
+
 
 /** Appart-card **/
 
@@ -316,14 +307,14 @@ img {
     height: 280px;
     width: 30%;
     min-width:280px;
+    box-sizing: border-box;
 }
 
 .appart-card img {
     border-radius:15px 15px 0 0 ;
     height: 160px ;
     width: 100%;
-   /* object-fit:cover;
-    object-position: top;*/
+
 }
 
 a .card-text {
@@ -333,7 +324,7 @@ a .card-text {
 /* effet sur card */
 
 .appart-card:hover{
-    transform:scale(1.1);
+    transform:scale(1.07);
 }
 
 /** populaire card **/
@@ -346,6 +337,7 @@ a .card-text {
 
 #populaire-appart .etoile{
     font-size: 10px;
+    padding-right: 10px;
 }
 
 .list-apparts .appart-card-image img {
@@ -389,7 +381,7 @@ a .card-text {
     max-height: 200px;
     object-fit:cover;
     object-position: top;
-    min-width:350px;
+    min-width:330px;
     height: 170px;
   }
 
@@ -431,7 +423,7 @@ a .card-text {
 }
 
 
-/*            Activités             */
+/*Activités*/
 
 #activite {
     margin-bottom: 60px;
@@ -442,7 +434,6 @@ a .card-text {
     display: flex;
     justify-content: space-between;
     height: 600px;
-    margin: 5px;
     gap: 10px;
 }
 
@@ -491,12 +482,11 @@ a .card-text {
     transform:scale(1.1);
 }
 
-/*              Footer              */
+/*Footer*/
 
 footer {
     width: auto;
     background-color: var(--grey);
-    /*margin: 0 -50px;*/
     padding: 50px;
     display: flex;
     justify-content: left;
@@ -529,32 +519,38 @@ footer .column ul li a {
 }
 
 /**/
+/* Quand la largeur de la fenêtre est comprise entre 992px et 1250px */
 
+@media  screen and (min-width: 992px)  and (max-width: 1250px) {
+    .ville #appart-ville .appart-ville-list .appart-card {
+         height: 290px;
+        width: 100%;
+    }
 
-@media screen and (max-width: 992px) {
-    /*.filters-button a:hover {
-        color: inherit;
-    }*/
-   /* .filters-button:hover {
-        transition: none;
-        background-color: inherit;
-    }*/
+    .ville #appart-ville .appart-ville-list .appart-card img{
+        height: 165px;
+        object-fit: cover;
+        object-position: right;
+    }
 }
+
+/* Quand la largeur de la fenêtre fait au maximum 1280px */
 
 @media screen and (max-width: 992px) {
 .search-box {
     padding: 0 10px;
-}
+    }
 
     main {
         padding: 0;
     }
+
     .ville > div {
         border: none;
-        /*background-color: inherit;*/
         border-radius: inherit;
         padding: 0 30px;
     }
+
     .ville #appart-ville {
         background-color: inherit;
     }
@@ -571,21 +567,24 @@ footer .column ul li a {
     .ville #populaire-appart {
         width: 100%;
         margin-bottom: 20px;
-        padding-bottom: 20px    ;
+        padding-bottom: 20px;
     }
 
     .ville #populaire-appart {
         order: -1;
-
     }
+
     .ville #populaire-appart .appart-ville-list .appart-card {
         height: 290px;
+        width: 100%;
     }
+
     .ville #appart-ville .appart-ville-list .appart-card img{
         height: 165px;
         object-fit: cover;
-        object-position: right;/*???*/
+        object-position: right;
     }
+
     .ville #appart-ville .appart-ville-list .appart-card {
         width: 100%;
     }
@@ -593,9 +592,11 @@ footer .column ul li a {
     #activite {
         padding: 0 10px;
     }
+
     #activite .activite-list, .column, .column .double {
         gap: 30px;
     }
+
     #activite .activite-list {
         flex-wrap: wrap;
         height: auto;
@@ -604,24 +605,30 @@ footer .column ul li a {
     #activite .activite-list .column {
         width: 48%;
     }
+
     #activite .activite-list .column {
         width: 100%;
     }
+
     .activite-list .column .mobil,
     .activite-list .column.double .mobil {
         height: 200px;
         margin-bottom: 0;
     }
+
     .activite-list {
         padding: 0 10px;
     }
+
     .activite-list .column article img {
         height: 80%;
     }
+
     .activite-list .column article h3 {
         margin-top: 5px;
         padding: 0 0 0 10px;
     }
+
     footer {
         justify-content: space-between;
 
@@ -629,61 +636,75 @@ footer .column ul li a {
 
     footer .column {
         width: auto;
-
     }
 }
 
+/* Quand la largeur de la fenêtre fait au maximum 768px */
 
 @media screen and (max-width: 768px){
-/*
-    body {
-        padding: 0 20px;
-    }*/
+
     header {
         flex-direction: column;
     }
+
     header #logo {
         display: flex;
         margin: auto;
     }
+
     .search-box .search-title h1 {
         font-size: 23px;
     }
+
     .sousNav {
         flex-basis: 100%;
     }
+
     .sousNav a {
         text-align: center;
         margin: 0;
         border-bottom:4px solid lightgrey;
         padding: 15px;
     }
-    .sousNav a:hover {
-        border-bottom: 4px solid ;
-        border-top-color: transparent;
+
+/* background bleu clair d'hébergements et activités */
+    .sousNav a:active {
+        background: var(--light-blue);
+        color: var(--blue);
     }
+
+    .sousNav a:hover {
+        border-top:revert;
+    }
+
     .search .mon-button {
         display: none;
     }
+
     .fas.fa-search {
         display: inline;
         background-color: inherit;
         color: white;
     }
+
     #filters {
         flex-direction: column;
         align-items: flex-start;
     }
+
     #filters .filters-button {
         margin: 0;
     }
+
     .ville #populaire-appart {
         order: -1;
         padding: 0 10px;
     }
+
     .ville #appart-ville {
         padding: 0 10px;
     }
+
     #appart-ville .appart-ville-list  {
         flex-direction: column;
 
@@ -691,7 +712,6 @@ footer .column ul li a {
     #appart-ville .appart-ville-list .appart-card {
         width: 100%;
         height: 275px;
-
     }
 
     #activite h2{
@@ -700,7 +720,6 @@ footer .column ul li a {
 
     #activite .activite-list .column {
         width: 100%;
-        /*padding: 0 10px;*/
     }
 
     .activite-list .column article,
