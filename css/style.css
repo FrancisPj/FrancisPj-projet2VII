@@ -393,7 +393,6 @@ a .card-text {
    margin-top: auto;
 }
 
-
 /* ombrage sur la carte */
 
 .groupe-card:hover {
@@ -519,6 +518,8 @@ footer .column ul li a {
 }
 
 /**/
+
+
 /* Quand la largeur de la fenêtre est comprise entre 992px et 1250px */
 
 @media  screen and (min-width: 992px)  and (max-width: 1250px) {
@@ -534,7 +535,7 @@ footer .column ul li a {
     }
 }
 
-/* Quand la largeur de la fenêtre fait au maximum 1280px */
+/* Quand la largeur de la fenêtre fait au maximum 992px */
 
 @media screen and (max-width: 992px) {
 .search-box {
