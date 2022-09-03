@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-    font-size: 120%;
+    font-size: 20px;
     margin-top: 4px;
     margin-bottom: 5px;
 }
@@ -72,8 +72,7 @@ header #logo{
 
 .sousNav a {
     text-align: center;
-    flex-basis: 50%;
-}
+    }
 
 header nav a{
     padding: 45px;
@@ -259,6 +258,7 @@ img {
 
 .ville #populaire-appart {
     flex-basis: 33%;
+    min-width: auto;
     }
 
 .appart-ville-list .appart-card p {
@@ -271,8 +271,8 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
+   justify-content: space-evenly;
+   margin-bottom: 10px;
 }
 
 /**Liste populaire**/
@@ -281,6 +281,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    justify-content: space-evenly;
 }
 
 
@@ -310,8 +311,8 @@ img {
     margin: 0 0 20px;
     height: 280px;
     width: 30%;
-    min-width:280px;
-    box-sizing: border-box;
+   /* min-width:280px;*/
+    /*box-sizing: border-box;*/
 }
 
 .appart-card img {
@@ -323,6 +324,7 @@ img {
 
 a .card-text {
     padding-left: 15px;
+    font-size: medium;
 }
 
 /* effet sur card */
@@ -363,10 +365,11 @@ a .card-text {
 
 .pop-card-text {
     display: flex;
-    flex-basis: 100%;
+    /*flex-basis: 100%;*/
     flex-direction: column;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     padding-left: 15px;
+    width: 75%;
 }
 
 .image-groupe-card {
@@ -385,16 +388,20 @@ a .card-text {
     max-height: 200px;
     object-fit:cover;
     object-position: top;
-    min-width:330px;
+    /*min-width:330px;*/
     height: 170px;
   }
 
 .pop-card-text .pop-text{
- padding-left: 15px;
+    padding-left: 15px;
+    font-size: medium;
 }
-
+.pop-card-text .pop-text p{
+    margin: 2px 0;
+}
 .groupe-card .stars {
-   margin-top: auto;
+    margin-top: auto;
+    font-size: 0.2vw;
 }
 
 /* ombrage sur la carte */
@@ -409,6 +416,7 @@ a .card-text {
 .stars {
     padding-left: 10px;
     margin-top: 20PX;
+    font-size: 0.2vw;
 }
 
 .stars i{
@@ -646,7 +654,7 @@ footer .column ul li a {
 
 /* Quand la largeur de la fenêtre fait au maximum 768px */
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 275px) and (max-width: 768px){
 
     header {
         flex-direction: column;
@@ -670,9 +678,10 @@ footer .column ul li a {
         margin: 0;
         border-bottom:4px solid lightgrey;
         padding: 15px;
+        width: 100%;
     }
 
-/* background bleu clair d'hébergements et activités */
+        /* background bleu clair d'hébergements et activités */
     .sousNav a:active {
         background: var(--light-blue);
         color: var(--blue);
@@ -718,7 +727,23 @@ footer .column ul li a {
         width: 100%;
         height: 275px;
     }
+    #appart-ville .appart-ville-list .appart-card img {
+        height: auto;
+    }
 
+    #appart-ville .appart-ville-list .appart-card .card-text h3{
+        font-size: 18px;
+    }
+    #appart-ville .appart-ville-list .appart-card .card-text p{
+        font-size: 14px;
+    }
+
+    .pop-text h3{
+        font-size: 18px;
+    }
+    .pop-text p{
+        font-size: 14px;
+    }
     #activite h2{
         padding-left: 10px;
     }
@@ -743,10 +768,20 @@ footer .column ul li a {
     .activite-list .column article h3 {
         margin-top: 5px;
         padding: 0 0 0 10px;
+        font-size: 21px;
     }
     footer {
         flex-direction: column;
         padding: 20px;
     }
 
+    .appart-card { font-size: 5vw;
+    }
+
+    .pop-text {
+        font-size: 5vw ;
+    }
+    .groupe-card {
+        height: auto;
+    }
 }
